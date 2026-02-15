@@ -1,18 +1,14 @@
 package ratewio.homework6;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
     //наша библиотека, в которой хранятся все книги
     public static ArrayList<Book> library = new ArrayList<Book>();
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         //объявляем авторов
-        Author tolstoy = new Author("Лев", "Толстой", 9),
-                turgenev = new Author("Иван", "Тургенев", 7),
-                shakespeare = new Author("Уильям", "Шекспир", 10),
-                dostoevsky = new Author("Фёдор", "Достоевский", 5);
+        Author tolstoy = new Author("Лев", "Толстой", 9), turgenev = new Author("Иван", "Тургенев", 7), shakespeare = new Author("Уильям", "Шекспир", 10), dostoevsky = new Author("Фёдор", "Достоевский", 5);
 
 
         //Добавляем в библиотеку книги Льва Толстого
@@ -38,8 +34,7 @@ public class Main {
         //Выводим все большие книги в нашей библиотеке
         System.out.println("Большие книги: ");
         for (Book b : library)
-            if (b.isBig())
-                System.out.println(b + ", " + b.pages + " страниц");
+            if (b.isBig()) System.out.println(b + ", " + b.pages + " страниц");
         System.out.println();
 
         //Выводим найденные книги по запросу "Шекспир"
@@ -73,8 +68,7 @@ public class Main {
      */
     public static void findAndPrint(String word) {
         System.out.println("По запросу \"" + word + "\" найдено: ");
-        findMatchesInLibrary(word)
-                .forEach(b -> System.out.println(b));
+        findMatchesInLibrary(word).forEach(b -> System.out.println(b));
         System.out.println();
     }
 
@@ -84,8 +78,7 @@ public class Main {
     public static ArrayList<Book> findMatchesInLibrary(String word) {
         ArrayList<Book> matched = new ArrayList<Book>();
         for (Book b : library)
-            if (b.matches(word))
-                matched.add(b);
+            if (b.matches(word)) matched.add(b);
         return matched;
     }
 }
