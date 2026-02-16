@@ -1,8 +1,7 @@
 package ratewio.homework6;
 
 public class Author {
-    String name,
-            surname;
+    String name, surname;
     int rating;
 
     public Author(String name, String surname, int rating) {
@@ -21,7 +20,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return name + " " + surname +
-                ", рейтинг - " + rating;
+        return name + " " + surname + ", рейтинг - " + rating;
     }
 }
