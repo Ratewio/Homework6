@@ -8,7 +8,10 @@ public class Main {
 
     static void main(String[] args) {
         //объявляем авторов
-        Author tolstoy = new Author("Лев", "Толстой", 9), turgenev = new Author("Иван", "Тургенев", 7), shakespeare = new Author("Уильям", "Шекспир", 10), dostoevsky = new Author("Фёдор", "Достоевский", 5);
+        Author tolstoy = new Author("Лев", "Толстой", 9);
+        Author turgenev = new Author("Иван", "Тургенев");
+        Author shakespeare = new Author("Уильям", "Шекспир", 10);
+        Author dostoevsky = new Author("Фёдор", "Достоевский", 5);
 
 
         //Добавляем в библиотеку книги Льва Толстого
@@ -71,6 +74,7 @@ public class Main {
         findMatchesInLibrary(word).forEach(b -> System.out.println(b));
         System.out.println();
     }
+
 
     /**
      * Возвращает ArrayList объектов Book который содержит совпадения word с описаниями книг в нашей библиотеке

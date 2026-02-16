@@ -22,11 +22,17 @@ public class Book {
     }
 
     public int estimatePrice() {
-        return Math.max((int) Math.floor((3 * pages) * Math.sqrt(author.rating)), 250);
+        return Math.max(
+                (int) Math.floor((3 * pages) * Math.sqrt(author.rating)),
+                250
+        );
     }
 
     @Override
     public String toString() {
-        return title + ", " + releaseYear + "г." + ", Автор - " + author + ", цена - " + estimatePrice() + "р";
+        return title +
+                ", " + releaseYear + "г." +
+                ", Автор - " + author +
+                ", цена - " + estimatePrice() + "р";
     }
 }
